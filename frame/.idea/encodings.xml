@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/mybatis/ch01-hello_mybatis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mybatis/ch01-hello_mybatis/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mybatis/ch02-mybatis-dao/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mybatis/ch02-mybatis-dao/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mybatis/ch03-proxy-dao/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mybatis/ch03-proxy-dao/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mybatis/ch04-param/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mybatis/ch04-param/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mybatis/ch05-return-result/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mybatis/ch05-return-result/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mybatis/ch06-dynamic-sql/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mybatis/ch06-dynamic-sql/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mybatis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mybatis/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring/ch01-hello-spring/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

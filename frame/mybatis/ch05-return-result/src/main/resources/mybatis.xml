@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <properties resource="jdbc.properties"/>
+    <!--settings:控制mybatis全局行为-->
+    <settings>
+        <!--设置mybatis输出日志 logImpl:控制日志  STDOUT_LOGGING:输出到控制台上-->
+        <setting name="logImpl" value="STDOUT_LOGGING"></setting>
+    </settings>
+    <!--定义别名-->
+    <typeAliases>
+        <!--第一种方式:
+                可以指定一个类型一个自定义别名
+                type:自定义类型的权限定名称
+                alias:别名(短小,容易记忆)
+        -->
+        <typeAlias type="com.bjpowernode.domian.Student" alias="stu"/>
+        <typeAlias type="com.bjpowernode.vo.ViewStudent" alias="view"/>
+<!--第二种方式:
+           <package>name是包名,这个包中的所有类,类名就是别名(类名不区分大小写)-->
+        <package name="com.bjpowernode.domian"/>
+        <package name="com.bjpowernode.vo"/>
+    </typeAliases>
+    <!-- 配置 mybatis 的环境:数据库的连接信息 -->
+    <environments default="mysql">
+        <environment id="mysql">
+            <!-- 配置事务的类型
+                Type:JDBC(表示使用jdbc的connection对象
+                        的commit,rollback做事务处理
+            -->
+            <transactionManager type="JDBC"/>
+            <!-- 配置连接数据库的信息：用的是数据源(连接池)
+                 datasource:表示数据源的类型,POOLED表示使用连接池
+            -->
+            <dataSource type="POOLED">
+                <!--diver,user,username,password-->
+                <!--数据库的驱动-->
+                <property name="driver" value="${driver}"/>
+                <!--连接数据库的url字符串-->
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${username}"/>
+                <property name="password" value="${password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <!-- 告知映射配置的位置 -->
+    <mappers>
+        <!--一个mapper标签指定一个文件的位置,填写从类路径开始信息  target/classes()-->
+        <mapper resource="com/bjpowernode/dao/StudentDao.xml"/>
+    </mappers>
+</configuration>
+
