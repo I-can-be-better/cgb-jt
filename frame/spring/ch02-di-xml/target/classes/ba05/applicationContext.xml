@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--引用类型的自动注入:
+            spring框架根据某些规定可以给引用类型赋值,不用手动给引用类型赋值了
+        使用的规则常用的是byname,bytype
+            1)byname(按名称注入):java类中引用类型的属性名和spring容器中(配置文件)<bean>中的id名称一样
+                        且数据类型是一样的,这样的容器中的bean,spring能够赋值给引用类型
+                        语法规则:
+                            <bean id="xx" class="yyy" autowire="byName">
+                                简单类型属性赋值
+                            </bean>
+            2)byType(按类型注入):java类中引用类型的数据类型和spring容器中(配置文件)<bean>的class属性
+                        是同源关系,这样的bean能够赋值给引用类型
+
+                        同源关系:同一类
+                            1.java类中引用类型的数据类型和<bean>的class的值是一样的
+                            2.java类中引用类型的数据类型和bean中的class是父子类关系
+                            3.java类中引用类型的数据类型和bean的class的值接口是实现类关系的
+                            语法:
+                                <bean id="xx" class="yyy" autowire="byType">
+                                    简单类型属性赋值
+                                </bean>
+            注意:在bytype中,在xml配置文件中声明bean只能有一个符合条件的,符合条件的多于1个,就会报错
+        -->
+    <!--byType-->
+<!--    <bean id="mystudent" class="com.bjpowerndoe.ba05.Student" autowire="byType">-->
+<!--        <property name="name" value="老八"/>-->
+<!--        <property name="age" value="16"/>-->
+
+<!--    </bean>-->
+    <!--声明School对象-->
+
+    <bean id="myschool" class="com.bjpowerndoe.ba05.School">
+            引用类型的数据类型与bean的class值是一样时
+            <property name="name" value="北大"/>
+            <property name="address" value="北京朝阳区"/>
+    </bean>
+
+    <!--声明School的子类-->
+    <bean id="primaryschool" class="com.bjpowerndoe.ba05.PrimarySchool" autowire="byType">
+        <property name="name" value="北京小学"/>
+        <property name="address" value="北京雄安区"></property>
+    </bean>
+
+
+</beans>

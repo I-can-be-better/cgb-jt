@@ -12,6 +12,7 @@
         <module>mybatis</module>
         <module>spring</module>
         <module>ch01-hello-spring</module>
+        <module>ch03-ioc-homework</module>
     </modules>
 
     <properties>
