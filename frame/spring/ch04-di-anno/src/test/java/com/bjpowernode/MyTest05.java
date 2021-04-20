@@ -14,7 +14,7 @@ public class MyTest05 {
     public void test01(){
         String config="applicationContext.xml";
         ApplicationContext ac=new ClassPathXmlApplicationContext(config);
-        Student student=(Student)ac.getBean("students");
+        Student student=(Student)ac.getBean("student05");
         System.out.println("student = " + student);
     }
 }

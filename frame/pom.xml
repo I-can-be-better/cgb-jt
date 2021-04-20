@@ -13,6 +13,7 @@
         <module>spring</module>
         <module>ch01-hello-spring</module>
         <module>ch03-ioc-homework</module>
+        <module>ch05-aop-leadin</module>
     </modules>
 
     <properties>
@@ -106,6 +107,11 @@
             <artifactId>javax.servlet-api</artifactId>
             <version>3.1.0</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.25</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>

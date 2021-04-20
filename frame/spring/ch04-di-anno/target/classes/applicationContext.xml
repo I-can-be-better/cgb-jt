@@ -18,10 +18,10 @@
             2.给这个新的约束文件起个命名空间的名称
     -->
     <context:component-scan base-package="com.bjpowernode"/>
-
 <!--<bean id="myschool" class="com.bjpowernode.ba03.School">-->
 <!--    <property name="name" value="北大青鸟"/>-->
 <!--    <property name="address" value="武汉"/>-->
 <!--</bean>-->
+    <context:property-placeholder location="classpath:test.properties"></context:property-placeholder>
 
 </beans>

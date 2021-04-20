@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 
 
 
-@Component("mystudent")
+@Component("student03")
 public class Student {
     /**
      * 简单类型的属性赋值
@@ -39,7 +39,7 @@ public class Student {
     private School school;
 
     public Student() {
-        System.out.println("mystudent的无参构造");
+        System.out.println("student03的无参构造");
     }
 
     public void setName(String name) {

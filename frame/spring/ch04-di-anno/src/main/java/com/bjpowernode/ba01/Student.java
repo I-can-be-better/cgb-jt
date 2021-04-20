@@ -34,7 +34,7 @@ import org.springframework.stereotype.Component;
 //使用values属性指定对象的名称,调用的是类的无参构造方法
 //@Component(value="myStudent")
 //省略value,也可运行
-@Component("myStudent")
+@Component("student01")
 //不指定对象名称,由spring提供默认名称:类名的首字母小写
 //@Component
 public class Student {
@@ -42,7 +42,7 @@ public class Student {
     private Integer age;
 
     public Student() {
-        System.out.println("mystudent的无参构造");
+        System.out.println("student01的无参构造");
     }
 
     public void setName(String name) {

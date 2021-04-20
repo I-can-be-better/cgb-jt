@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 
 
 
-@Component("students")
+@Component("student05")
 public class Student {
     /**
      * 简单类型的属性赋值
@@ -49,11 +49,11 @@ public class Student {
      */
     @Autowired
     //byName注入方式
-    @Qualifier("schools")
+    @Qualifier("school05")
     private School school;
 
     public Student() {
-        System.out.println("mystudent的无参构造");
+        System.out.println("student05的无参构造");
     }
 
     public void setName(String name) {

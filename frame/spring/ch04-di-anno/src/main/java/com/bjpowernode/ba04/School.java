@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
  * @author X
  * date 2021/4/19 10:25:14
  */
-@Component("school")
+@Component("school04")
 public class School {
     @Value(value ="传智播客*黑马")
     private String name;

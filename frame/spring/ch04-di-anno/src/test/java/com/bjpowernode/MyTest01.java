@@ -22,7 +22,7 @@ public class MyTest01 {
         //指定value
 //        Student student=(Student)ac.getBean("myStudent");
         //不指定value,由spring提供默认名称
-        Student student=(Student)ac.getBean("student");
+        Student student=(Student)ac.getBean("student01");
         System.out.println("student = " + student);
     }
 }
