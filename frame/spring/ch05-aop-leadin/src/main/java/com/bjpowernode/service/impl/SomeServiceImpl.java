@@ -1,8 +1,10 @@
 package com.bjpowernode.service.impl;
 
+
+
+
 import com.bjpowernode.service.SomeService;
 import com.bjpowernode.util.ServiceTools;
-
 
 import java.util.Date;
 
@@ -20,22 +22,22 @@ public class SomeServiceImpl implements SomeService {
     @Override
     public void dosome() {
 //        System.out.println("当前时间:"+new Date());
-        ServiceTools.dolog();
+//        ServiceTools.dolog();
         System.out.println("执行业务方法dosome()");
 
         //方法的最后,提交事务
 //        System.out.println("方法执行完毕,提交事务");
-        ServiceTools.doTrans();
+//        ServiceTools.doTrans();
     }
 
     @Override
     public void doother() {
 //        System.out.println("当前时间:"+new Date());
-        ServiceTools.dolog();
+//        ServiceTools.dolog();
         System.out.println("执行业务方法doother()");
 
         //方法的最后,提交事务
 //        System.out.println("方法执行完毕,提交事务");
-        ServiceTools.doTrans();
+//        ServiceTools.doTrans();
     }
 }
