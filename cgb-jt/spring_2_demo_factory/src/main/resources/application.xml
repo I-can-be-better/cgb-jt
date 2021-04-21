@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--静态工厂实例化对象的写法-->
+
+<!--静态工厂实例化对象的写法,方法必须是static-->
+    <bean id="calentdar" class="com.jt.factory.StaticFactory" factory-method="getCalendars"/>
+<!--实例化对象 步骤:将工厂交给spring容器管理  步骤2:通过对象调用方法 -->
+    <bean id="instancefactory" class="com.jt.factory.InstanceFactory"/>
+    <bean id="calendar" factory-bean="instancefactory" factory-method="getCalendar"/>
+
+<!--spring工厂模式-->
+    <bean></bean>
+</beans>
