@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="user01" class="com.jt.pojo.User">
+        <property name="id" value="438"/>
+        <property name="name" value="程宇"/>
+        <property name="list">
+            <list>
+                <value>程晓宇,老王</value>
+            </list>
+        </property>
+        <property name="map">
+            <map>
+                <entry key-ref="map01" value="12"/>
+            </map>
+        </property>
+        <property name="set">
+            <set>
+                <value>指定是有什么毛病</value>
+            </set>
+        </property>
+        <property name="property">
+           <value >log4j.propertues</value>
+        </property>
+
+<!--        <property name="map">-->
+<!--            <map>-->
+<!--                <entry key="id" value="001"></entry>-->
+<!--               <entry key="name" value="多里对象"></entry>-->
+<!--            </map>-->
+<!--        </property>-->
+    </bean>
+<bean name="map01" class="com.jt.pojo.User">
+    <property name="map">
+        <map>
+            <entry key="id" value="001"/>
+            <entry key="name" value="多里对象"></entry>
+        </map>
+    </property>
+</bean>
+</beans>

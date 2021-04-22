@@ -6,11 +6,24 @@
 <!--静态工厂实例化对象的写法-->
 
 <!--静态工厂实例化对象的写法,方法必须是static-->
-    <bean id="calentdar" class="com.jt.factory.StaticFactory" factory-method="getCalendars"/>
+    <bean id="calendar01" class="com.jt.factory.StaticFactory" factory-method="getCalendar"/>
 <!--实例化对象 步骤:将工厂交给spring容器管理  步骤2:通过对象调用方法 -->
     <bean id="instancefactory" class="com.jt.factory.InstanceFactory"/>
-    <bean id="calendar" factory-bean="instancefactory" factory-method="getCalendar"/>
+    <bean id="calendar02" factory-bean="instancefactory" factory-method="getCalendar"/>
 
 <!--spring工厂模式-->
-    <bean></bean>
+    <bean id="calendar03" class="com.jt.factory.SpringFactory"/>
+<!--4.测试单例多例 通过scope属性控制对象的单例和多例
+        scope="prototype" 多例设置
+        scope="singleton" 缺省值 单例
+
+      lazy-init="true"  开启懒加载
+      lazy-init="false"/lazy-init="default"  懒加载不生效
+        原则: 只要是多例对象 都是懒加载. 懒加载只对单例对象有效
+            关于懒加载说明: 一般服务器对象应该先行创建,用户直接使用即可.
+            多例对象: 用户使用时创建,同时将对象的生命周期交给使用者管理,
+               Spring不负责维护对象的生命周期
+      (随用随销)
+        -->
+    <bean id="user02" class="com.jt.User" scope="prototype" lazy-init="true"/>
 </beans>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util.xsd">
+
+<!--管理user对象-->
+<bean id="user01" class="com.jt.pojo.User">
+<!--&lt;!&ndash;调用对象的set方法实现赋值,set方法必须添加&ndash;&gt;-->
+    <property name="id" value="101"/>
+    <property name="name" value="武当王也"/>
+</bean>
+
+<!--构造方法进行注入-->
+    <bean id="user02" class="com.jt.pojo.User">
+        <constructor-arg name="id" value="110"/>
+        <constructor-arg name="name" value="老天师"/>
+    </bean>
+
+
+</beans>
